@@ -78,10 +78,10 @@ export default class CreateExercise extends Component {
   render() {
     return(
       <div>
-        <h3>Create New Exercise Log</h3>
+        <h3>Créer un nouveau journal d'exercices</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Username: </label>
+            <label>Utilisateur: </label>
             <select
               ref="userInput"
               required
@@ -110,7 +110,7 @@ export default class CreateExercise extends Component {
           />
           </div>
           <div className="form-group">
-            <label>Duration (in minutes): </label>
+            <label>Durée (en minutes): </label>
             <input
               type="text"
               className="form-control"
