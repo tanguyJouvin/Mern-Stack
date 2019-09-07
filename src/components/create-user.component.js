@@ -4,7 +4,6 @@ import axios from 'axios';
 export default class CreateUser extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       username: ''
     }
@@ -31,12 +30,10 @@ export default class CreateUser extends Component {
     });
   }
 
-
-
   render() {
     return(
       <div>
-        <h3>Creation d'un nouvel utilisateur</h3>
+        <h3>Création d'un nouvel utilisateur</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 
             <label>Utilisateur: </label>

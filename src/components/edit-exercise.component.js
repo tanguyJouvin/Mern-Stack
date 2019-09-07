@@ -7,12 +7,6 @@ export default class EditExercise extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
-    this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangeDuration = this.onChangeDuration.bind(this);
-    this.onChangeDate = this.onChangeDate.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-
     this.state = {
       username: '',
       description: '',
@@ -50,31 +44,31 @@ export default class EditExercise extends Component {
 
   }
 
-  onChangeUsername(e) {
+  onChangeUsername = (e) => {
     this.setState({
       username: e.target.value
     })
   }
 
-  onChangeDescription(e) {
+  onChangeDescription = (e) => {
     this.setState({
       description: e.target.value
     })
   }
 
-  onChangeDuration(e) {
+  onChangeDuration = (e) => {
     this.setState({
       duration: e.target.value
     })
   }
 
-  onChangeDate(date) {
+  onChangeDate = (date) => {
     this.setState({
       date: date
     })
   }
 
-  onSubmit(e) {
+  onSubmit = (e) => {
     e.preventDefault();
 
     const exercise = {
@@ -95,17 +89,17 @@ export default class EditExercise extends Component {
   render() {
     return (
     <div>
-      <h3>Edit Exercise Log</h3>
+      <h3>Editer votre journal d'exercice</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
+          <label>Utilisateur: </label>
           <select ref="userInput"
               required
               className="form-control"
               value={this.state.username}
               onChange={this.onChangeUsername}>
               {
-                this.state.users.map(function(user) {
+                this.state.users.map((user) => {
                   return <option 
                     key={user}
                     value={user}>{user}
@@ -124,7 +118,7 @@ export default class EditExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label>Durée (en minutes): </label>
           <input 
               type="text" 
               className="form-control"
@@ -141,7 +135,6 @@ export default class EditExercise extends Component {
             />
           </div>
         </div>
-
         <div className="form-group">
           <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
         </div>
