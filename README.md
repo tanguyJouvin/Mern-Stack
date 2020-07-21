@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was a student project to understand The stack with MongoDb, Node Express, React, Node Js.
 
 ## Available Scripts
 
